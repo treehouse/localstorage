@@ -1,0 +1,28 @@
+@mixin flex($dir, $wrap, $just, $align) {
+    @content;
+    display: flex;
+    flex-direction: $dir;
+    flex-wrap: $wrap;
+    justify-content: $just;
+    align-items: $align;
+}
+
+@mixin bg($color) {
+    @content;
+    background-color: $color;
+}
+
+@mixin size($height, $width) {
+    @content;
+    height: $height;
+    width: $width;
+}
+
+@mixin text-overflow($lines) {
+    @content;
+    display: -webkit-box;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $lines;
+}
